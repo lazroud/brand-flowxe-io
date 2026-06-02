@@ -1,0 +1,585 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>FLOWXE Brand Kit</title>
+  <meta name="description" content="Official FLOWXE brand assets — logos, colors, typography. Download SVG and PNG.">
+  <link rel="icon" type="image/svg+xml" href="/logo/favicon.svg">
+  <link rel="preconnect" href="https://rsms.me/">
+  <link rel="stylesheet" href="https://rsms.me/inter/inter.css">
+
+  <meta property="og:title" content="FLOWXE Brand Kit">
+  <meta property="og:description" content="Download official FLOWXE logos and brand assets.">
+  <meta property="og:image" content="https://brand.flowxe.io/logo/png/logo-horizontal-tagline-1024w.png">
+  <meta property="og:type" content="website">
+
+  <style>
+    :root {
+      --flow-blue: #185FA5;
+      --current: #1D9E75;
+      --deep-night: #0C1A2E;
+      --electric: #378ADD;
+      --foam: #9FE1CB;
+      --surface: #E6F1FB;
+      --text: #0C1A2E;
+      --text-muted: #5a6b80;
+      --border: #d6e4f2;
+      --bg: #ffffff;
+    }
+
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      font-size: 16px;
+      line-height: 1.6;
+      color: var(--text);
+      background: var(--bg);
+      -webkit-font-smoothing: antialiased;
+    }
+
+    /* Шапка */
+    .site-header {
+      background: var(--deep-night);
+      padding: 20px 24px;
+    }
+
+    .site-header-inner {
+      max-width: 1080px;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+    }
+
+    .site-header img {
+      height: 36px;
+    }
+
+    /* Hero */
+    .hero {
+      background: var(--deep-night);
+      color: var(--surface);
+      padding: 80px 24px 100px;
+      text-align: center;
+    }
+
+    .hero h1 {
+      font-size: 56px;
+      font-weight: 700;
+      letter-spacing: -0.03em;
+      margin: 0 0 16px;
+      line-height: 1.05;
+    }
+
+    .hero h1 span {
+      background: linear-gradient(90deg, var(--electric), var(--foam));
+      -webkit-background-clip: text;
+      background-clip: text;
+      -webkit-text-fill-color: transparent;
+      color: transparent;
+    }
+
+    .hero p {
+      font-size: 19px;
+      color: rgba(230, 241, 251, 0.8);
+      max-width: 580px;
+      margin: 0 auto;
+      line-height: 1.5;
+    }
+
+    /* Секции */
+    .section {
+      max-width: 1080px;
+      margin: 0 auto;
+      padding: 80px 24px;
+    }
+
+    .section + .section {
+      padding-top: 0;
+    }
+
+    .section h2 {
+      font-size: 32px;
+      font-weight: 700;
+      margin: 0 0 8px;
+      letter-spacing: -0.02em;
+    }
+
+    .section-intro {
+      color: var(--text-muted);
+      margin: 0 0 40px;
+      font-size: 16px;
+    }
+
+    /* Сетка логотипов */
+    .logo-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+      gap: 24px;
+    }
+
+    .logo-card {
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      overflow: hidden;
+      background: var(--bg);
+      transition: border-color .15s, box-shadow .15s;
+    }
+
+    .logo-card:hover {
+      border-color: var(--flow-blue);
+      box-shadow: 0 4px 20px rgba(24, 95, 165, 0.08);
+    }
+
+    .logo-preview {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 48px 24px;
+      min-height: 180px;
+    }
+
+    .logo-preview.dark {
+      background: var(--deep-night);
+    }
+
+    .logo-preview.light {
+      background: var(--surface);
+    }
+
+    .logo-preview.checkered {
+      background-color: #f8fafd;
+      background-image:
+        linear-gradient(45deg, #eef3f9 25%, transparent 25%),
+        linear-gradient(-45deg, #eef3f9 25%, transparent 25%),
+        linear-gradient(45deg, transparent 75%, #eef3f9 75%),
+        linear-gradient(-45deg, transparent 75%, #eef3f9 75%);
+      background-size: 16px 16px;
+      background-position: 0 0, 0 8px, 8px -8px, -8px 0;
+    }
+
+    .logo-preview img {
+      max-height: 80px;
+      max-width: 80%;
+      width: auto;
+      height: auto;
+    }
+
+    .logo-preview.square img {
+      max-height: 100px;
+      max-width: 100px;
+    }
+
+    .logo-meta {
+      padding: 20px 24px;
+      border-top: 1px solid var(--border);
+    }
+
+    .logo-name {
+      font-size: 16px;
+      font-weight: 600;
+      margin: 0 0 4px;
+    }
+
+    .logo-desc {
+      font-size: 13px;
+      color: var(--text-muted);
+      margin: 0 0 16px;
+      line-height: 1.5;
+    }
+
+    .download-row {
+      display: flex;
+      gap: 8px;
+      flex-wrap: wrap;
+    }
+
+    .download-row a {
+      font-size: 12px;
+      font-weight: 500;
+      color: var(--flow-blue);
+      background: var(--surface);
+      padding: 6px 12px;
+      border-radius: 6px;
+      text-decoration: none;
+      font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+      transition: background .15s, color .15s;
+    }
+
+    .download-row a:hover {
+      background: var(--flow-blue);
+      color: #fff;
+    }
+
+    /* Цвета */
+    .color-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+      gap: 16px;
+    }
+
+    .color-card {
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      overflow: hidden;
+    }
+
+    .color-swatch {
+      height: 100px;
+    }
+
+    .color-info {
+      padding: 16px;
+    }
+
+    .color-name {
+      font-size: 14px;
+      font-weight: 600;
+      margin: 0 0 4px;
+    }
+
+    .color-hex {
+      font-size: 12px;
+      font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+      color: var(--text-muted);
+      margin: 0;
+    }
+
+    /* Правила использования */
+    .usage-block {
+      background: var(--surface);
+      border-radius: 14px;
+      padding: 32px;
+      margin-top: 24px;
+    }
+
+    .usage-block h3 {
+      margin: 0 0 12px;
+      font-size: 18px;
+      font-weight: 600;
+    }
+
+    .usage-block ul {
+      margin: 0;
+      padding-left: 20px;
+    }
+
+    .usage-block li {
+      margin: 6px 0;
+      font-size: 14px;
+      color: var(--text);
+    }
+
+    .usage-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 16px;
+    }
+
+    /* Футер */
+    .site-footer {
+      border-top: 1px solid var(--border);
+      padding: 32px 24px;
+      background: var(--surface);
+      font-size: 13px;
+      color: var(--text-muted);
+    }
+
+    .site-footer-inner {
+      max-width: 1080px;
+      margin: 0 auto;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .site-footer a {
+      color: var(--flow-blue);
+      text-decoration: none;
+    }
+
+    .site-footer a:hover {
+      text-decoration: underline;
+    }
+
+    /* Mobile */
+    @media (max-width: 640px) {
+      .hero { padding: 60px 20px 70px; }
+      .hero h1 { font-size: 40px; }
+      .section { padding: 60px 20px; }
+      .section h2 { font-size: 26px; }
+      .usage-grid { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+
+<header class="site-header">
+  <div class="site-header-inner">
+    <img src="/logo/logo-horizontal-dark.svg" alt="FLOWXE">
+  </div>
+</header>
+
+<section class="hero">
+  <h1>FLOWXE <span>brand kit</span></h1>
+  <p>Official logos, colors and typography for press, partners and integrations. Free to download, please follow the usage rules below.</p>
+</section>
+
+<section class="section">
+  <h2>Logo</h2>
+  <p class="section-intro">Choose the variant that fits your background. SVG is recommended whenever possible — it scales without quality loss.</p>
+
+  <div class="logo-grid">
+
+    <!-- Primary mark on dark -->
+    <div class="logo-card">
+      <div class="logo-preview dark square">
+        <img src="/logo/logo-mark.svg" alt="Logo mark on dark">
+      </div>
+      <div class="logo-meta">
+        <div class="logo-name">Primary mark</div>
+        <p class="logo-desc">The main FLOWXE chevron with wave gradient. Use on dark backgrounds.</p>
+        <div class="download-row">
+          <a href="/logo/logo-mark.svg" download>SVG</a>
+          <a href="/logo/png/logo-mark-256.png" download>PNG 256</a>
+          <a href="/logo/png/logo-mark-512.png" download>PNG 512</a>
+          <a href="/logo/png/logo-mark-1024.png" download>PNG 1024</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Primary mark on light -->
+    <div class="logo-card">
+      <div class="logo-preview light square">
+        <img src="/logo/logo-mark-light.svg" alt="Logo mark on light">
+      </div>
+      <div class="logo-meta">
+        <div class="logo-name">Primary mark (light bg)</div>
+        <p class="logo-desc">Same mark optimized for light backgrounds.</p>
+        <div class="download-row">
+          <a href="/logo/logo-mark-light.svg" download>SVG</a>
+          <a href="/logo/png/logo-mark-light-256.png" download>PNG 256</a>
+          <a href="/logo/png/logo-mark-light-512.png" download>PNG 512</a>
+          <a href="/logo/png/logo-mark-light-1024.png" download>PNG 1024</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Mono -->
+    <div class="logo-card">
+      <div class="logo-preview checkered square">
+        <img src="/logo/logo-mark-mono.svg" alt="Monochrome mark">
+      </div>
+      <div class="logo-meta">
+        <div class="logo-name">Monochrome mark</div>
+        <p class="logo-desc">Single-color version via <code>currentColor</code>. For embossing, stamping, single-color print.</p>
+        <div class="download-row">
+          <a href="/logo/logo-mark-mono.svg" download>SVG</a>
+          <a href="/logo/png/logo-mark-mono-256.png" download>PNG 256</a>
+          <a href="/logo/png/logo-mark-mono-512.png" download>PNG 512</a>
+          <a href="/logo/png/logo-mark-mono-1024.png" download>PNG 1024</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Horizontal light -->
+    <div class="logo-card">
+      <div class="logo-preview light">
+        <img src="/logo/logo-horizontal.svg" alt="Horizontal logo">
+      </div>
+      <div class="logo-meta">
+        <div class="logo-name">Horizontal — light background</div>
+        <p class="logo-desc">Mark + wordmark. For email signatures, document headers, business cards.</p>
+        <div class="download-row">
+          <a href="/logo/logo-horizontal.svg" download>SVG</a>
+          <a href="/logo/png/logo-horizontal-512w.png" download>PNG 512w</a>
+          <a href="/logo/png/logo-horizontal-1024w.png" download>PNG 1024w</a>
+          <a href="/logo/png/logo-horizontal-2048w.png" download>PNG 2048w</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Horizontal dark -->
+    <div class="logo-card">
+      <div class="logo-preview dark">
+        <img src="/logo/logo-horizontal-dark.svg" alt="Horizontal logo on dark">
+      </div>
+      <div class="logo-meta">
+        <div class="logo-name">Horizontal — dark background</div>
+        <p class="logo-desc">Same as above, with light wordmark for dark backgrounds (site headers, dark UI).</p>
+        <div class="download-row">
+          <a href="/logo/logo-horizontal-dark.svg" download>SVG</a>
+          <a href="/logo/png/logo-horizontal-dark-512w.png" download>PNG 512w</a>
+          <a href="/logo/png/logo-horizontal-dark-1024w.png" download>PNG 1024w</a>
+          <a href="/logo/png/logo-horizontal-dark-2048w.png" download>PNG 2048w</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Horizontal tagline -->
+    <div class="logo-card">
+      <div class="logo-preview light">
+        <img src="/logo/logo-horizontal-tagline.svg" alt="Horizontal logo with tagline">
+      </div>
+      <div class="logo-meta">
+        <div class="logo-name">Horizontal with tagline</div>
+        <p class="logo-desc">Mark + wordmark + tagline. For press kits, hero sections, presentation covers.</p>
+        <div class="download-row">
+          <a href="/logo/logo-horizontal-tagline.svg" download>SVG</a>
+          <a href="/logo/png/logo-horizontal-tagline-512w.png" download>PNG 512w</a>
+          <a href="/logo/png/logo-horizontal-tagline-1024w.png" download>PNG 1024w</a>
+          <a href="/logo/png/logo-horizontal-tagline-2048w.png" download>PNG 2048w</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- App icon -->
+    <div class="logo-card">
+      <div class="logo-preview dark square">
+        <img src="/logo/icon-app.svg" alt="App icon" style="max-height: 110px; border-radius: 18px;">
+      </div>
+      <div class="logo-meta">
+        <div class="logo-name">App icon</div>
+        <p class="logo-desc">Square icon 1024×1024 with rounded corners for App Store and Google Play.</p>
+        <div class="download-row">
+          <a href="/logo/icon-app.svg" download>SVG</a>
+          <a href="/logo/png/icon-app-256.png" download>PNG 256</a>
+          <a href="/logo/png/icon-app-512.png" download>PNG 512</a>
+          <a href="/logo/png/icon-app-1024.png" download>PNG 1024</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Favicon -->
+    <div class="logo-card">
+      <div class="logo-preview dark square">
+        <img src="/logo/favicon.svg" alt="Favicon" style="max-height: 64px;">
+      </div>
+      <div class="logo-meta">
+        <div class="logo-name">Favicon</div>
+        <p class="logo-desc">Simplified version readable from 16×16 px. For browser tabs and bookmarks.</p>
+        <div class="download-row">
+          <a href="/logo/favicon.svg" download>SVG</a>
+          <a href="/logo/png/favicon-256.png" download>PNG 256</a>
+          <a href="/logo/png/favicon-512.png" download>PNG 512</a>
+          <a href="/logo/png/favicon-1024.png" download>PNG 1024</a>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<section class="section">
+  <h2>Colors</h2>
+  <p class="section-intro">The brand palette is built around two core colors that form the wave gradient inside the chevron.</p>
+
+  <div class="color-grid">
+    <div class="color-card">
+      <div class="color-swatch" style="background: #185FA5;"></div>
+      <div class="color-info">
+        <p class="color-name">Flow Blue</p>
+        <p class="color-hex">#185FA5</p>
+      </div>
+    </div>
+    <div class="color-card">
+      <div class="color-swatch" style="background: #1D9E75;"></div>
+      <div class="color-info">
+        <p class="color-name">Current</p>
+        <p class="color-hex">#1D9E75</p>
+      </div>
+    </div>
+    <div class="color-card">
+      <div class="color-swatch" style="background: #0C1A2E;"></div>
+      <div class="color-info">
+        <p class="color-name">Deep Night</p>
+        <p class="color-hex">#0C1A2E</p>
+      </div>
+    </div>
+    <div class="color-card">
+      <div class="color-swatch" style="background: #378ADD;"></div>
+      <div class="color-info">
+        <p class="color-name">Electric</p>
+        <p class="color-hex">#378ADD</p>
+      </div>
+    </div>
+    <div class="color-card">
+      <div class="color-swatch" style="background: #9FE1CB;"></div>
+      <div class="color-info">
+        <p class="color-name">Foam</p>
+        <p class="color-hex">#9FE1CB</p>
+      </div>
+    </div>
+    <div class="color-card">
+      <div class="color-swatch" style="background: #E6F1FB;"></div>
+      <div class="color-info">
+        <p class="color-name">Surface</p>
+        <p class="color-hex">#E6F1FB</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <h2>Usage</h2>
+  <p class="section-intro">Please follow these rules to keep the FLOWXE brand consistent across all touchpoints.</p>
+
+  <div class="usage-grid">
+    <div class="usage-block">
+      <h3>✓ Do</h3>
+      <ul>
+        <li>Scale proportionally</li>
+        <li>Place on solid brand colors from the palette</li>
+        <li>Use the monochrome version for single-color printing</li>
+        <li>Maintain clear space equal to half the mark's height</li>
+        <li>Use SVG whenever the medium supports it</li>
+      </ul>
+    </div>
+
+    <div class="usage-block">
+      <h3>✗ Don't</h3>
+      <ul>
+        <li>Change proportions, rotate, skew, or mirror</li>
+        <li>Replace the wave gradient with a flat color (except mono)</li>
+        <li>Add shadows, outlines, glows, or other effects</li>
+        <li>Place the logo on noisy backgrounds without proper contrast</li>
+        <li>Translate the wordmark — FLOWXE stays in Latin script</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <h2>Typography</h2>
+  <p class="section-intro">FLOWXE uses Inter — a modern open-source typeface designed for screens.</p>
+
+  <div class="usage-block">
+    <h3>Inter</h3>
+    <ul>
+      <li>License: SIL Open Font License (free for any use)</li>
+      <li>Download: <a href="https://rsms.me/inter/" target="_blank" rel="noopener">rsms.me/inter</a> or <a href="https://fonts.google.com/specimen/Inter" target="_blank" rel="noopener">Google Fonts</a></li>
+      <li>Weights in use: Regular (400), Medium (500), Semibold (600), Bold (700)</li>
+      <li>Fallback stack: <code style="font-family: ui-monospace, monospace; font-size: 12px;">-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif</code></li>
+    </ul>
+  </div>
+</section>
+
+<footer class="site-footer">
+  <div class="site-footer-inner">
+    <div>© <script>document.write(new Date().getFullYear())</script> FLOWXE Network</div>
+    <div>
+      <a href="https://flowxe.io">flowxe.io</a>
+      &nbsp;·&nbsp;
+      <a href="https://legal.flowxe.io">Legal</a>
+      &nbsp;·&nbsp;
+      <a href="https://t.me/flowxe_bot">@flowxe_bot</a>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
